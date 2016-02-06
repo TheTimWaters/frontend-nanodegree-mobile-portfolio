@@ -4,10 +4,11 @@
 The objective of this project was to optimize the critical rendering path and make this page (an example online portfolio) render as quickly as possible by applying the techniques taught in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
 ### Summary of Optimizations made for this project
-# views/js/main.js (pizza resizing)
+####views/js/main.js (pizza resizing)
 * Removed function determineDx and in-lined logic to resize pizza image in the changePizzaSizes() function. The switch statement sets the width the a percentage value
 * In changePizzaSizes() eliminated extra DOM element access operations to avoid forced synchronous layouts.
-# views/js/main.js (pizza background animation while scrolling)
+
+####views/js/main.js (pizza background animation while scrolling)
 * In updatePositions(), used the transform CSS property to update background pizza position while page is scrolling and moved DOM element access functions out of the for loop, and removed metrics timing calculations.
 
 ### Instructions followed for this project
