@@ -1,10 +1,16 @@
 ## Website Performance Optimization portfolio project
 
-Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
-To get started, check out the repository, inspect the code,
+The objective of this project was to optimize the critical rendering path and make this page (an example online portfolio) render as quickly as possible by applying the techniques taught in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
-### Getting started
+### Summary of Optimizations made for this project
+# views/js/main.js (pizza resizing)
+* Removed function determineDx and in-lined logic to resize pizza image in the changePizzaSizes() function. The switch statement sets the width the a percentage value
+* In changePizzaSizes() eliminated extra DOM element access operations to avoid forced synchronous layouts.
+# views/js/main.js (pizza background animation while scrolling)
+* In updatePositions(), used the transform CSS property to update background pizza position while page is scrolling and moved DOM element access functions out of the for loop, and removed metrics timing calculations.
+
+### Instructions followed for this project
 
 ####Part 1: Optimize PageSpeed Insights score for index.html
 
@@ -53,12 +59,4 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 
 * <a href="http://getbootstrap.com/css/">Bootstrap's CSS Classes</a>
 * <a href="http://getbootstrap.com/components/">Bootstrap's Components</a>
-
-### Summary of Optimizations made for this project
-# views/js/main.js (pizza resizing)
-* Removed function determineDx and in-lined logic to resize pizza image in the changePizzaSizes() function. The switch statement sets the width the a percentage value
-* In changePizzaSizes() eliminated extra DOM element access operations to avoid forced synchronous layouts.
-# views/js/main.js (pizza background animation while scrolling)
-* In updatePositions(), used the transform CSS property to update background pizza position while page is scrolling and moved DOM element access functions out of the for loop, and removed metrics timing calculations.
-
 
